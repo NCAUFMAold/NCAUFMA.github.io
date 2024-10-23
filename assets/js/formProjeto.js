@@ -45,7 +45,7 @@ const chipContainer = document.querySelector(".chip-container");
         formProjeto.addEventListener("submit", (e) =>{
             e.preventDefault();
             formData = new FormData(formProjeto);
-           // console.log(formData);
+           console.log(formData);
 
             const chips = document.getElementsByClassName('chip');
             
