@@ -1,0 +1,47 @@
+---
+layout: manager
+title: Projeto Dashboard
+---
+
+
+<div id="projetos">
+    <h1 id="teste">Projetos</h1>
+
+    <div id="pesquisa">
+        <input type="text" name="titulo" id="tituloProjeto" placeholder="Digite o título do projeto que deseja pesquisar">
+        <button type="submit" class="addButton" id="addButton">Adicione um Projeto</button>
+    </div>
+
+    <div id="dashboardProjetos">
+        <div id="legenda">
+            <div class="celula_legenda">Titulo</div>
+            <div class="celula_legenda">Subtitulo</div>
+            <div class="celula_legenda">Grupo</div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.getElementById("addButton").onclick = function () {
+        location.href = "http://localhost:4000/form_projeto/";
+    };
+
+    window.addEventListener('DOMContentLoaded', getProjetos);
+    
+    //chamada para o endpoint para pegar todos os projetos
+    async function getProjetos() {
+        try{
+            const response = await fetch('http://localhost:3000/getProjects');
+            if (!response.ok){
+                throw new Error('Erro ao chamar API');
+            }
+            const data = await response.json()
+
+            console.log(data)
+        }catch(error){
+            //TODO: implementar mensagem de erro no html
+        }
+    }
+
+</script>

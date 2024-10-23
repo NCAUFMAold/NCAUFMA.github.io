@@ -1,0 +1,41 @@
+---
+---
+
+.tags {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
+}
+#tagprojeto > a{
+  background: var(--amarelosecondary) !important;
+}
+#tagnoticia > a{
+  background:var(--roxoprimary) !important;
+}
+#tagpublicacoes > a{
+  background: var(--vermelhoprimary)!important;
+}
+.tag {
+  max-width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--roxoprimary);
+  color: var(--white) !important;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  //transition: background var(--transition), color var(--transition);
+}
+
+.tag:hover {
+  background: var(--light-gray);
+}
+
+.tag[data-active] {
+  background: var(--light-gray);
+}

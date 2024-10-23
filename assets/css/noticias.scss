@@ -1,0 +1,135 @@
+---
+---
+
+
+.cardsnoticias{
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+  justify-content: center;
+  width: 100%;
+}
+
+
+
+.cardnoticia-link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-decoration: none;
+  color: var(--text);
+  text-align: center;
+}
+.cardnoticia-imagem {
+  object-fit: cover;
+  width: 100%;
+}
+
+
+.cardnoticia-titulo{
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+.cardnoticia-descricao{
+  margin: 0;
+  text-align: left;
+}
+.cardnoticiatext > div:last-child {
+  align-items: flex-start;
+  justify-content: left;
+
+}
+
+.cardnoticia {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(33.33% - 60px);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+}
+.cardnoticia:hover{
+}
+
+.cardnoticiaimage img {
+  max-width: 60%;
+  border-radius: 20px;
+}
+
+.cardnoticiatext {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 50px 20px 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+}
+
+.cardnoticiatext > h1 {
+  background-color: #3498db; /* Cor azul */
+  font-size: 30px;
+}
+
+.cardnoticiatext > a:first-child {
+  width: 100%;
+  font-weight: var(--semi-bold);
+}
+
+.cardnoticiatext > div {
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+}
+
+
+.headerPaginaNoticia { 
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  background-image: url('/assets/images/Fundo_Header_Pagina_Noticias.svg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;  
+  width: 100%; 
+  padding: 0 10%;
+}
+
+.headerPaginaNoticia .tituloPaginaNoticia {
+  font-size: 30px; 
+  color: #000000; 
+  font-weight: bold;
+  margin-top: 50px; 
+  margin-bottom: 5px; 
+}
+
+.InformacoesDebaixoImagem { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.TrocarNoticia {
+  background-color: #FBEAD6;
+  height: 100px;
+  display: flex;
+  align-items: center; 
+  padding: 0 2%;
+  margin-bottom: -50px;
+}
+
+.DivImagemNoticia {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 0 10%;
+}
