@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["search-info.scss"],"names":[],"mappings":"AAAA,aACE,SACA,kBACA,kBACA,kBACA","sourcesContent":[".search-info {\r\n  margin: 0;\r\n  text-align: center;\r\n  font-style: italic;\r\n  color: var(--text);\r\n  text-decoration: none;\r\n}\r\n"],"file":"search-info.css"}

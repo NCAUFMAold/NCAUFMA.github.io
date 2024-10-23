@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["body.scss"],"names":[],"mappings":"AAAA,cACE,aACA,sBACA,SACA,UACA,kBACA,wBACA","sourcesContent":[".body-default {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: 0;\r\n  padding: 0;\r\n  color: var(--text);\r\n  font-family: var(--body);\r\n  text-align: center;\r\n}\r\n.body-manager{\r\n  \r\n}"],"file":"body.css"}

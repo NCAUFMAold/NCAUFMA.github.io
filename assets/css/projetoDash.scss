@@ -1,0 +1,33 @@
+---
+---
+
+#pesquisa{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+
+#lattesDiv{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    align-items: center;
+    /* padding: 10px; */
+}
+
+#inputLattes{
+    margin-left: 5px;
+}
+
+#legenda{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.celula_legenda{
+    text-align: center;
+    border: 1px solid black;
+}

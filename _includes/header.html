@@ -1,0 +1,64 @@
+{% assign image = page.header | default: site.header | relative_url %}
+{% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
+
+
+<header
+  {% if dark == true or dark == false %}
+    data-dark="{{ dark }}"
+  {% endif %}
+  {% if page.url == "/" %}
+    data-big
+  {% endif %}
+>
+  <a href="{{ "" | relative_url }}" class="home">
+      <span>
+          <img class="logo" src="/assets/images/logo.svg" alt="logo">
+      </span>
+  </a>
+
+  <nav class="nav-header">
+    {% assign pages = site.pages
+      | where_exp: "page", "page.nav"
+      | sort: "nav.order"
+    %}
+    {% for nav_page in pages %}
+      {% if nav_page.title == page.title %}
+        {% assign active_class = "active" %}
+      {% else %}
+        {% assign active_class = "" %}
+      {% endif %}
+      <a
+        href="/{{ nav_page.url | relative_url | remove_first: '/'}}"
+        class="{{ active_class }}"
+        id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
+      >
+        {{ nav_page.title }}
+      </a>
+    {% endfor %}
+  </nav>
+  
+  
+  
+
+  
+
+  <div class="language-selector">
+    <div class="selected-language">
+      <img src="/assets/images/bandeiraBrasil.svg" alt="Bandeira do Brasil">
+      <span>PT</span>
+      <span class="arrow-down">&#9662;</span> <!-- Adiciona a seta aqui -->
+    </div>
+    <ul class="language-options">
+      <li data-lang="pt">
+        <img src="{{ bandeiraBrasil | relative_url }}" alt="Bandeira do Brasil">
+        <span>PT</span>
+      </li>
+      <li data-lang="en">
+        <img src="/assets/images/bandeiraEUA.svg" alt="Bandeira dos EUA">
+        <span>EN</span>
+      </li>
+    </ul>
+  </div>
+  
+</header>
+
