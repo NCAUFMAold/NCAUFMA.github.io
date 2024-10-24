@@ -23,17 +23,18 @@
 .conteudo{
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 .conteudo-paginamenu{
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 80%;
 }
 .tipoecards{
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
   margin-bottom: 30px;
 }
 .titulosecao{

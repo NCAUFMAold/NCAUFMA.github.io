@@ -20,8 +20,21 @@
 {%- elsif include.component == "membros" -%}
   {% assign grouped_data = data
     | group_by: "role"
-    | sort: "name"
   %}
+
+  {% assign role_order = "Professor,Doutorado,Mestrado,Graduação,Ex-aluno" | split: "," %}
+  
+  {%- assign ordered_grouped_data = "" | split: "," %}
+  
+  {% for role in role_order %}
+    {% for group in grouped_data %}
+      {% if group.name == role %}
+        {% assign ordered_grouped_data = ordered_grouped_data | push: group %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  
+  {% assign grouped_data = ordered_grouped_data %}
 {%- endif -%}
 
 {% assign component_tags = emptyarray %}
@@ -116,6 +129,7 @@
           text=d.text
           title=d.title
           url=d.url
+          id=d.id
         %}
       {% endfor %}
 

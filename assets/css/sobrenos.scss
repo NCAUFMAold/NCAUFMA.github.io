@@ -1,23 +1,65 @@
 ---
 ---
+h2{
+  font-size: 30px;
+  margin: 0;
+}
 .InformacoesPricipais{
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 50px 10% 0 10%
+  padding: 50px 10% 10px 10%
+  
 }
-
+.texto-sobrenos{
+  width: 70%;
+}
 .sobrenosimagem{
   width: 100%;
   height: auto;
   object-fit: cover;
+  gap: 10px;
+}
+
+ .valoreslista {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;  
+  padding: 0;             
+  margin: 0;      
+  gap: 20px;        
+}
+ .valoreslista li {
+  display: flex;            
+  gap: 20px;
+}
+
+.valoreslista li i {
+  align-items: flex-start;
+  font-size: 1.2em;       
+  color: #5a5a5a;      
+  margin: 0;  
+  margin-top: 5px;
+  width: 24px;
+
+}
+
+.valores li p{
+  margin: 0;
+}
+
+.historialista li{
+  gap: 10px;
+}
+.sobrenosimagem img{
+  max-width: 100%;
 }
 
 .linhasdepesquisa{
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 0 10%;
+  
+ 
 }
 .linhasdepesquisa >*{
   margin: 0;
@@ -28,6 +70,7 @@
 }
 .linhasdepesquisa > p{
   margin-bottom: 30px;
+  margin-top: 20px;
   text-align: justify;
   font-size: 18px;
   line-height: 1.6; /* Espaçamento de linha para melhorar a legibilidade */
@@ -46,8 +89,7 @@
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgb(255, 255, 255);
-  width: 799px;
-  max-width: 799px;
+  width: 100%;
 }
 
 .menu-opcoes {

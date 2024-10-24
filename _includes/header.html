@@ -1,7 +1,6 @@
 {% assign image = page.header | default: site.header | relative_url %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 
-
 <header
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
@@ -10,13 +9,21 @@
     data-big
   {% endif %}
 >
+  <!-- Logo sempre visível -->
   <a href="{{ "" | relative_url }}" class="home">
-      <span>
-          <img class="logo" src="/assets/images/logo.svg" alt="logo">
-      </span>
+    <span>
+      <img class="logo" src="/assets/images/logo.svg" alt="logo">
+    </span>
   </a>
 
+  <!-- Menu móvel (hamburger) visível apenas em telas pequenas -->
+  <div class="mobile-menu">
+    <span class="menu-icon">&#9776;</span> <!-- Ícone do menu móvel -->
+  </div>
+
+  <!-- Navegação principal, oculta em telas pequenas -->
   <nav class="nav-header">
+    <ul class="nav-list">
     {% assign pages = site.pages
       | where_exp: "page", "page.nav"
       | sort: "nav.order"
@@ -27,21 +34,34 @@
       {% else %}
         {% assign active_class = "" %}
       {% endif %}
-      <a
-        href="/{{ nav_page.url | relative_url | remove_first: '/'}}"
-        class="{{ active_class }}"
-        id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
-      >
-        {{ nav_page.title }}
-      </a>
-    {% endfor %}
+        <li class="nav-item{% if nav_page.submenu %} has-submenu{% endif %}">
+          <a
+            href="/{{ nav_page.url | relative_url | remove_first: '/'}}"
+            class="{{ active_class }}"
+            id="{{ nav_page.title | replace: ' ', '' | replace: 'í', 'i' | replace: 'ó', 'o' | replace: 'õ', 'o' | replace: 'ç', 'c' | downcase }}"
+          >
+            {{ nav_page.title }}
+          </a>
+          {% if nav_page.submenu %}
+            <ul class="submenu">
+              {% for sub_page in nav_page.submenu %}
+                <li>
+                  <a 
+                  href="/{{ sub_page.url | relative_url | remove_first: '/'}}"
+                  class="{{ active_class }}"
+                  >
+                    {{ sub_page.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </nav>
-  
-  
-  
 
-  
-
+  <!-- Seletor de idioma, oculto em telas pequenas -->
   <div class="language-selector">
     <div class="selected-language">
       <img src="/assets/images/bandeiraBrasil.svg" alt="Bandeira do Brasil">
@@ -59,6 +79,4 @@
       </li>
     </ul>
   </div>
-  
 </header>
-

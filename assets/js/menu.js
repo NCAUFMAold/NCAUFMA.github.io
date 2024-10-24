@@ -2,7 +2,7 @@ let secaoAtiva = null; // Variável para controlar a seção ativa
 
 // Função para exibir todas as seções
 function mostrarTodasSecoes() {
-    document.querySelectorAll('.conteudo-paginamenu .section').forEach(section => {
+    document.querySelectorAll('.section').forEach(section => {
         section.style.display = 'block';
     });
 
@@ -20,7 +20,7 @@ function mostrarSecao(titulo, item) {
         mostrarTodasSecoes();
     } else {
         // Exibe apenas a seção correspondente
-        document.querySelectorAll('.conteudo-paginamenu .section').forEach(section => {
+        document.querySelectorAll('.section').forEach(section => {
             if (section.getAttribute('data-title') === titulo) {
                 section.style.display = 'block';
             } else {

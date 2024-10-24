@@ -1,12 +1,13 @@
-<section class="headerPagina" style="background-image: url('{{ include.background_image }}');">
+<section class="headerPagina" id="{% if page.layout == 'noticia' %}paginaNoticia{% endif %}"  style="background-image: url('{{ include.background_image }}');">
   {% if include.imageheader %}
   <div class="laboratorioimagemheader">
     <img src="{{ include.imageheader | relative_url }}" alt="Imagem do laboratório"> 
     {% include search-info.html %}
   </div>
-{% endif %}
+  {% endif %}
 
   <h1 class="tituloPagina">{{ page.title }}</h1>
+
 
   {% if include.show_search %}
   <div class="barradepesquisa">

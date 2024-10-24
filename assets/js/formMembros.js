@@ -6,21 +6,29 @@ if (formMembro){
     formMembro.addEventListener("submit", (e) =>{
     e.preventDefault();
     formData = new FormData(formMembro);
-    formData.append("nome_membro", document.getElementById("nomeMembro").value);
-    console.log(formData);
+    
+    let objJson = {};
+    
+    for (var [key, value] of formData.entries()) { 
+        console.log(key, value);
+        objJson[key] = value;
+    }
 
     const requestOptions = {
         method: 'POST',
+        // headers: {
+        //     'Content-Type': 'application/json'
+        // },
         body: formData,
     };
 
 
-    fetch(apiMembroUrl, requestOptions)
-    .then(response => {
-            if (!response.ok){
-                throw new Error('Erro ao chamar API');
-            }
-            return response.json();
+        fetch(apiMembroUrl, requestOptions)
+        .then(response => {
+                if (!response.ok){
+                    throw new Error('Erro ao chamar API');
+                }
+                return response.json();
         })
     })
 }

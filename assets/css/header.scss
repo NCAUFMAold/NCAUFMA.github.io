@@ -53,11 +53,7 @@ header a {
 }
 
 
-.nav-header > a {
-  position: relative;
-  color: var(--text);
-  text-decoration: none; 
-}
+
 
 #home.active::after,
 #home:hover::after {
@@ -189,3 +185,179 @@ header a {
   background-color: var(--white);
 }
 
+
+
+
+
+.nav-header ul.nav-list {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  gap: 30px;
+  color: var(--text);
+  align-items: center;
+
+}
+
+
+.nav-item > a {
+  position: relative;
+  color: var(--text);
+  text-decoration: none; 
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+
+
+.nav-header, .language-selector {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-list .nav-item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.language-selector {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+/* Estilos para telas menores que 1020px */
+@media (max-width: 1020px) {
+  .nav-header, .language-selector {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .mobile-menu .menu-icon {
+    font-size: 30px;
+    color: #333;
+  }
+
+  /* Quando o menu móvel estiver ativo */
+  .nav-header.open{
+    display: block; /* Exibe o menu e o seletor de idioma ao clicar no ícone */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    width: 250px;
+    height: 100vh;
+    padding: 50px;
+  }
+
+  .nav-header ul.nav-list {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start
+    ;
+  
+  }
+
+  .nav-list .nav-item a {
+    font-size: 18px;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .language-selector {
+    margin-top: 20px;
+  }
+
+  /* Estilo para overlay quando o menu está ativo */
+  .mobile-nav-active {
+    overflow: hidden; /* Evita o scroll quando o menu móvel está aberto */
+  }
+
+
+
+  #home.active::after,
+  #home:hover::after,
+  #sobrenos.active::after,
+  #sobrenos:hover::after,
+  #membros.active::after,
+  #membros:hover::after,
+  #noticias.active::after,
+  #noticias:hover::after,
+  #publicacoes.active::after,
+  #publicacoes:hover::after,
+  #projetos.active::after,
+  #projetos:hover::after {
+    content: none; 
+    
+  }
+
+  /* Aplica fundo colorido nos itens ativos ou ao passar o mouse */
+  #home.active,
+  #home:hover {
+    background-color: var(--roxoprimary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+
+  #sobrenos.active,
+  #sobrenos:hover {
+    background-color: var(--vermelhoprimary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+
+  #membros.active,
+  #membros:hover {
+    background-color: var(--amareloprimary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+
+  #noticias.active,
+  #noticias:hover {
+    background-color: var(--roxosecondary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+
+  #publicacoes.active,
+  #publicacoes:hover {
+    background-color: var(--vermelhosecondary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+
+  #projetos.active,
+  #projetos:hover {
+    background-color: var(--amarelosecondary);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: var(--white);
+    margin-left: -20px;
+  }
+}
