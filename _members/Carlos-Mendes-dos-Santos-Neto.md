@@ -1,6 +1,6 @@
 ---
 name: Carlos Mendes dos Santos Neto
-image: /assetssss/images/membros/m14.15.33 - Carlos Mendes dos Santos Neto.jpeg
+image: /assets/images/membros/m14.15.33 - Carlos Mendes dos Santos Neto.jpeg
 description:
 role: Mestrado
 linkemail: carlos.msn@nca.ufma.br

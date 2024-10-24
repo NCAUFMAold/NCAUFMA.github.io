@@ -1,6 +1,6 @@
 ---
 name: Thiago Paiva Freire
-image: /assetss/images/membros/m1.jpg
+image: /assets/images/membros/m1.jpg
 description: Aluno do programa DCCMAPI, com pesquisa de modelos de Deep Learning aplicados à segmentação de Imagens Médicas.
 role: Doutorado
 affiliation: DCCMAPI

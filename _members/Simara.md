@@ -1,6 +1,6 @@
 ---
 name: Simara
-image: /assetssss/images/membros/m29.15.22 - Simara Rocha.jpeg
+image: /assets/images/membros/m29.15.22 - Simara Rocha.jpeg
 description:
 role: Professor
 affiliation: DEINF

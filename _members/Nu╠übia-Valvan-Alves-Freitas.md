@@ -1,6 +1,6 @@
 ---
 name: Núbia Valvan Alves Freitas
-image: /assetssss/images/membros/m20.jpg
+image: /assets/images/membros/m20.jpg
 description: Aluna de engenharia da computação, programadora fullstack.
 role: Graduação
 affiliation: CENTRO DE CIÊNCIAS EXATAS E TECNOLOGIA - CCET

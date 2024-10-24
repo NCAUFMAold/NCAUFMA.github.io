@@ -1,6 +1,6 @@
 ---
 name: José Ribamar Durand Rodrigues Júnior
-image: /assetsss/images/membros/m13.jpg
+image: /assets/images/membros/m13.jpg
 description:
 role: Mestrado
 affiliation: DEINF

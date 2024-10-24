@@ -1,6 +1,6 @@
 ---
 name: MARCIO PEREIRA FERREIRA
-image: /assetssss/images/membros/m9.jpg
+image: /assets/images/membros/m9.jpg
 description:
 role: Mestrado
 linkemail: marcio.ferreira@nca.ufma.br

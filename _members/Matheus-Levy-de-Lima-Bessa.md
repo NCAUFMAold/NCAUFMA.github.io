@@ -1,6 +1,6 @@
 ---
 name: Matheus Levy de Lima Bessa
-image: /assetssss/images/membros/m15.jpg
+image: /assets/images/membros/m15.jpg
 description: Mestrando em Ciência da Computação na área de visão computacional
 role: Mestrado
 affiliation: PROGRAMA DE PÓS-GRADUAÇÃO EM CIÊNCIA DA COMPUTAÇÃO/CCET
