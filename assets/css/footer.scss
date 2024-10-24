@@ -4,10 +4,10 @@
 footer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 0px 0% 10px 20px;
   font-family: var(--font);
-  padding: 50px 0 0 0;
+  padding: 50px 0 15px 0;
 }
 
 footer a {
@@ -27,7 +27,7 @@ footer .icon {
   flex-direction: row;
   justify-content: space-around;
   padding: 0px 5% 0px 5%;
-  gap: 10px;  
+  gap: 30px;  
   align-items: center;
   width: 100%;
 }
@@ -36,22 +36,21 @@ footer .icon {
   flex-direction: column; 
   align-items: center;
   gap:20px;
-  min-width: 33.3%;
+  min-width: calc((100% / 3) - 30px);
 }
 
 .contatofooter{
-  display: center; 
+  display: flex; 
   flex-direction: column; 
-  align-items: center; 
   justify-content: center; 
-  min-width: 33.3%;
-  gap: 0px;
+  min-width: calc((100% / 3) - 30px);
+  gap: 30px;
 }
 
-.linkscontatos{
+.linkscontato{
   display: flex; 
   flex-direction: column;
-  gap: 0px;
+  gap: 30px;
 }
 .iconenome {
   display: flex;
@@ -63,13 +62,16 @@ footer .icon {
   text-decoration: none;
   gap: 20px;
   align-items: center;
-
 }
 
+.iconenome a i{
+  font-size: 24px;
+}
 .iconenome p {
-  text-align: left;
+  text-align: justify;
   display: flex;
-  gap: 2px;
+  margin: 0;
+  font-size: 1rem;
   flex-wrap: wrap;
 }
 
@@ -99,4 +101,40 @@ footer .icon {
   font-family: 'Open Sans', sans-serif; 
   font-weight: bold; 
   margin: 0; 
+}
+
+.Maps{
+  display: flex; 
+  justify-content: center; 
+  min-width: calc((100% / 3) - 30px);
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* Estilos para celulares (largura máxima de 480px) */
+@media (max-width: 480px) {
+  .informacoesecreditos{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .logofooter{
+    flex-direction: row;
+  }
+  .iconenome{
+    gap:10px;
+  }
+  .contatofooter{
+    gap:10px;
+  }
+  .linkscontato{
+    gap: 10px;
+  }
+  .Maps{
+    display: none;
+  }
+ 
 }
