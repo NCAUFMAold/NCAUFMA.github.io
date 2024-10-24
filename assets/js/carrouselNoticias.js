@@ -1,27 +1,21 @@
-// Inicializa o Swiper.js
 document.addEventListener('DOMContentLoaded', function () {
   var swiper = new Swiper('.swiper-container', {
-    loop: true, // Loop infinito
+    loop: true,
     autoplay: {
-      delay: 8000, // Autoplay com 8 segundos de intervalo
+      delay: 8000,
+      disableOnInteraction: false, 
     },
     pagination: {
-      el: '.swiper-pagination', // Bolinhas de navegação
-      clickable: true, // Permite clicar nas bolinhas
+      el: '.swiper-pagination',
+      clickable: true,
     },
-    breakpoints: {
-      640: {
-        slidesPerView: 1,
-        spaceBetween: 20,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 50,
-      },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
+    touchRatio: 1,
+    simulateTouch: true,
+    grabCursor: true,
+    // Sem breakpoints, para verificar se há interferência
   });
 });
