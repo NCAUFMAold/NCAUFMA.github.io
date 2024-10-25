@@ -1,19 +1,15 @@
 {% assign projetos = include %}
 
       <div class="cardProjeto">
-
         <a
           href="{{ include.link | relative_url }}"
           class="cardProjeto-link"
-
         >
-        
           <img
             src="{{ projetos.image | relative_url }}"
             class="cardProjeto-imagem"
             alt="{{ projetos.title | default: 'card image' }}"
           >
-        
           <div class="cardProjeto-texto">
             <h1 class="cardProjeto-titulo">{{ projetos.title }}</h1>
             

@@ -10,7 +10,12 @@ $wrap: 600px;
   color: var(--gray);
   width: 100%;
 }
-
+.post-nav span a{
+  color: var(--text);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
 .post-nav > :first-child {
   text-align: left;
 }
@@ -21,10 +26,15 @@ $wrap: 600px;
 
 .post-nav > :first-child .icon {
   margin-right: 0.5em;
+  font-size: 24px;
+  text-decoration: none;
 }
 
 .post-nav > :last-child .icon {
   margin-left: 0.5em;
+  font-size: 24px;
+  text-decoration: none;
+
 }
 
 @media (max-width: $wrap) {

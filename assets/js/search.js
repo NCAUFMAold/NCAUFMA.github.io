@@ -5,7 +5,7 @@
 */
 {
   // elements to filter
-  const elementSelector = ".projetos, .publicacoes, .noticias";
+  const elementSelector = ".cardnoticia, .cardProjeto, .cardpublicacao";
   // search box element
   const searchBoxSelector = ".search-box";
   // results info box element
@@ -37,30 +37,19 @@
   };
 
   // normalize tag string for comparison
-  window.normalizeTag = (tag) => tag.trim().toLowerCase().replaceAll(/\s+/g, "-");
+  window.normalizeTag = (tag) =>
+    tag.trim().toLowerCase().replaceAll(/\s+/g, "-");
 
   // get data attribute contents of element and children
   const getAttr = (element, attr) =>
     [element, ...element.querySelectorAll(`[data-${attr}]`)]
-      .map((element) => element?.dataset[attr] || "")
+      .map((element) => element.dataset[attr])
       .join(" ");
 
-  // get all tags outside the section (global tags)
-  const getGlobalTags = (container) => {
-    const globalTags = [...document.querySelectorAll(".tag")];
-    
-    // Limitar a busca das globalTags ao escopo fora da seção (container)
-    const sectionTags = container ? [...container.querySelectorAll(".tag")] : [];
-    const outsideTags = globalTags.filter(tag => !sectionTags.includes(tag));
-
-    return outsideTags.map(tag => normalizeTag(tag.innerText));
-  };
-
   // determine if element should show up in results based on query
-  const elementMatches = (element, { terms, phrases, tags }, container) => {
-    // tag elements within the section (if any)
-    const tagElements = [...container.querySelectorAll(".tag")];
-    
+  const elementMatches = (element, { terms, phrases, tags }) => {
+    // tag elements within element
+    const tagElements = [...element.querySelectorAll(".tag")];
 
     // check if text content exists in element
     const hasText = (string) =>
@@ -70,44 +59,37 @@
         getAttr(element, "search")
       )
         .toLowerCase()
-        .includes(string.toLowerCase());
-
-    // check if text matches a tag in element or globally (outside section)
-    const hasTag = (tagToMatch) => {
-      const normalizedTagToMatch = normalizeTag(tagToMatch);
-      const elementTags = tagElements.map((tag) => normalizeTag(tag.innerText));
-      return elementTags.includes(normalizedTagToMatch) || getGlobalTags(container).includes(normalizedTagToMatch);
-    };
+        .includes(string);
+    // check if text matches a tag in element
+    const hasTag = (string) =>
+      tagElements.some((tag) => normalizeTag(tag.innerText) === string);
 
     // match logic
-    const matchesTerms = terms.every(hasText) || !terms.length;
-    const matchesPhrases = phrases.some(hasText) || !phrases.length;
-    const matchesTags = tags.some(hasTag) || !tags.length;
-
-    return matchesTerms && matchesPhrases && matchesTags;
+    return (
+      (terms.every(hasText) || !terms.length) &&
+      (phrases.some(hasText) || !phrases.length) &&
+      (tags.some(hasTag) || !tags.length)
+    );
   };
 
   // loop through elements, hide/show based on query, and return results info
   const filterElements = (parts) => {
     let elements = document.querySelectorAll(elementSelector);
-    console.log("Elements to filter:", elements);
 
-    // Encontrar o container específico para filtrar (seção com os cards)
-    const container = document.querySelector(".cardsprojetos") || document.querySelector(".selecao-dinamica");
-
+    // results info
     let x = 0;
     let n = elements.length;
+    let tags = parts.tags;
 
+    // filter elements
     for (const element of elements) {
-      if (elementMatches(element, parts, container)) {
-        element.style.display = "block";
+      if (elementMatches(element, parts)) {
+        element.style.display = "";
         x++;
-      } else {
-        element.style.display = "none";
-      }
+      } else element.style.display = "none";
     }
 
-    return [x, n, parts.tags];
+    return [x, n, tags];
   };
 
   // highlight search terms
@@ -154,8 +136,8 @@
 
       // info template
       let info = "";
-      info += `Showing ${x.toLocaleString()} of ${n.toLocaleString()} results<br>`;
-      info += "<a href='./'>Clear search</a>";
+      info += `Mostrando ${x.toLocaleString()} of ${n.toLocaleString()} resultados<br>`;
+      info += "<a class='limparpesquisa' href='./'>Limpar pesquisa</a>";
 
       // set info HTML string
       boxes.forEach((el) => (el.innerHTML = info));
@@ -199,7 +181,8 @@
 
   // search based on url param
   const searchFromUrl = () => {
-    const query = new URLSearchParams(window.location.search).get("search") || "";
+    const query =
+      new URLSearchParams(window.location.search).get("search") || "";
     runSearch(query);
   };
 

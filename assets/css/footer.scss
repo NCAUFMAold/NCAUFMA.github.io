@@ -111,12 +111,9 @@ footer .icon {
   height: auto;
 }
 
-@media (max-width: 768px) {
-
-}
 
 /* Estilos para celulares (largura máxima de 480px) */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .informacoesecreditos{
     flex-direction: column;
     gap: 20px;

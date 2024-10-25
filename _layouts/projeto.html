@@ -1,51 +1,20 @@
 ---
-layout: default
+layout: paginas
+show_search: false
+show_post_info: true
+background_image: "assets/images/fundos/fundoneutro.svg"
 ---
 
-{% capture floatcontent %}
+<div class="titleNoticia" id="{% if page.title == 'Membros' %}menumembros{% elsif page.title == 'Sobre Nós' %}menusobrenos{% endif %}"></div>
 
-{% include membros.html lookup=page.slug %}
-
-<div>
-  {% for link in page.links %}
-    {% assign key = link[0] %}
-    {% assign value = link[1] %}
-    {% include button.html type=key link=value style="bare" %}<br>
-  {% endfor %}
+<div class="DivImagemNoticia">
+  {% include post-info.html imagem=page.image %}
 </div>
 
-{% endcapture %}
+<div class="InformacoesDebaixoImagem">
+  {{ content }}
+</div>
 
-{% include float.html content=floatcontent %}
-
-{{ content }}
-
-{% assign aliases = page.aliases
-  | default: page.name
-  | default: page.title
-  | join: ","
-  | split: ","
-  | array_filter
-%}
-
-{% capture search -%}
-  research/?search={% for alias in aliases %}"{{ alias }}" {% endfor %}
-{%- endcapture %}
-
-<p class="center">
-  <a href="{{ search | relative_url }}">
-    Search for {{ page.name | default: page.title }}'s papers on the Research page
-  </a>
-</p>
-
-{% capture search -%}
-  blog/?search={{ page.name }}
-{%- endcapture %}
-
-<!--
-<p class="center">
-  <a href="{{ search | relative_url }}">
-    See {{ page.name | default: page.title }}'s posts on the Blog page
-  </a>
-</p>
--->
+<div class="TrocarNoticia">
+  {% include post-nav.html post=page %}
+</div>

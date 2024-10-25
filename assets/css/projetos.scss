@@ -38,8 +38,9 @@
 
 .cardProjeto-imagem {
   max-height: 250px;
-  object-fit: cover;
+  object-fit: fill;
   width: 100%;
+  min-height: 20rem;
 
 }
 
@@ -77,11 +78,35 @@
   color: var(--body);
 }
 
-@media (max-width: 780px) {
-  .cardsprojetos{
+
+@media (max-width: 930px) {
+  .cardProjeto {
+    display: flex;
     flex-direction: column;
+    max-width: calc(50% - 30px);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
   }
-  .cardProjeto{
-    max-width: 100%;
+  .cardProjeto-imagem {
+    min-height: 15rem;
   }
 }
+@media (max-width: 630px) {
+  .cardProjeto {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  
+  }
+
+  .cardProjeto-imagem {
+    min-height: 10rem;
+  
+  }
+}
+
+  

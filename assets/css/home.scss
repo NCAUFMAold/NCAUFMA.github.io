@@ -110,6 +110,7 @@
   margin: 0;
 }
 .carousel-item img {
+  max-width: 50%;
   max-height: 200px;
 }
 
@@ -298,14 +299,21 @@ z-index: -1;
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1020px) {
+  .cardslaboratorios{
+    flex-wrap: wrap;
+  }
+  
+  .cardlaboratorio{
+    flex: 1 1 45%;
+  }
  
 
 
 }
 
 /* Estilos para celulares (largura máxima de 480px) */
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .conhecaMais{
     flex-direction: column-reverse;
     gap:30px;

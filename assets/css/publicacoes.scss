@@ -18,6 +18,7 @@ $wrap: 800px;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 100%;
 }
 
 .cardpublicacao-link{
@@ -28,7 +29,6 @@ $wrap: 800px;
   color: var(--text);
   transition: transform 0.3s ease;
   padding: 30px;
-  justify-content: center;
   align-items: center;
 
 }

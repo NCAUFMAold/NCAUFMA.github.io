@@ -1,15 +1,10 @@
 ---
 ---
-h2{
-  font-size: 30px;
-  margin: 0;
-}
-.InformacoesPricipais{
+
+.InformacoesPrincipais{
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 50px 10% 10px 10%
-  
 }
 .texto-sobrenos{
   width: 70%;
@@ -18,9 +13,17 @@ h2{
   width: 100%;
   height: auto;
   object-fit: cover;
-  gap: 10px;
 }
 
+.sobrenosimagem img{
+  max-width: 100%;
+  max-height: 30rem;
+}
+
+
+.InformacoesValores >*{
+  margin: 0;
+}
  .valoreslista {
   display: flex;
   flex-direction: column;
@@ -48,18 +51,10 @@ h2{
   margin: 0;
 }
 
-.historialista li{
-  gap: 10px;
-}
-.sobrenosimagem img{
-  max-width: 100%;
-}
 
 .linhasdepesquisa{
   display: flex;
   flex-direction: column;
-  
- 
 }
 .linhasdepesquisa >*{
   margin: 0;
@@ -167,7 +162,7 @@ border-right: none;
 }
 
 .conteudolinhasdepesquisa.active {
-  max-height: 12em; /* Define a altura máxima quando o conteúdo estiver visível */
+  max-height: 20em; /* Define a altura máxima quando o conteúdo estiver visível */
   opacity: 1; /* Torna o conteúdo visível */
   padding: 15px;
 }
@@ -182,8 +177,30 @@ border-right: none;
 }
 .texto-centralizado > *{
     margin: 0;
-
 }
-   
-  
 
+.InfomacoesHistoria >*{
+  margin: 0;
+}
+
+.historialista li{
+  gap: 10px;
+}
+
+@media (max-width: 820px) {
+  .tabela-dinamica{
+    display: flex;
+    flex-direction: row;
+  }
+  .menu-opcoes{
+    flex-direction: column;
+    min-width: 40%;
+
+  }
+  .conteudolinhasdepesquisa{
+    min-width: 60%;
+  }
+  .conteudolinhasdepesquisa.active{
+    max-height:80rem ;
+  }
+}
