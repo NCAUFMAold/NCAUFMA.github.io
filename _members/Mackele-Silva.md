@@ -1,5 +1,5 @@
 ---
-name: Mackele Silva
+name: Mackele Lourrane Jurema Da Silva
 image: /assets/images/membros/m18.jpg
 description:
 role: Graduação

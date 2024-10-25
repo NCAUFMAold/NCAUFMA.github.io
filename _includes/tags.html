@@ -14,7 +14,7 @@
 {% if tags.size > 0 or include.repo %}
   <div
     class="tags"
-    id="{% if page.title == 'Noticias' %}tagnoticia{% elsif page.title == 'Publicações' %}tagpublicacoes{% elsif page.title == 'Projetos' %}tagprojeto{% endif %}"
+    id="{% if page.title == 'Noticias' %}tagnoticia{% elsif page.title == 'Publicações' %}tagpublicacoes{% elsif page.title == 'Projetos' %}tagprojeto{% elsif page.title == 'Home' %}tagprojeto{% endif %}"
 
     {% if link %}
       data-link="{{ link }}"

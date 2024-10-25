@@ -5,7 +5,7 @@ show_post_info: true
 background_image: "assets/images/fundos/fundoneutro.svg"
 ---
 
-<div class="titleNoticia" id="{% if page.title == 'Membros' %}menumembros{% elsif page.title == 'Sobre Nós' %}menusobrenos{% endif %}"></div>
+<div class="titleNoticia" id="{% if page.layout == 'Membros' %}menumembros{% elsif page.title == 'Sobre Nós' %}menusobrenos{% endif %}"></div>
 
 <div class="DivImagemNoticia">
   {% include post-info.html imagem=page.image %}

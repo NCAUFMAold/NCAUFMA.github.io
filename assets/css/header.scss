@@ -16,12 +16,10 @@ header {
   align-items: center; 
   padding: 20px 50px; 
   font-family: var(--font);
-
-  @if $sticky {
-    position: sticky !important; 
-    top: 0; 
-    z-index: 10 !important; 
-  }
+  position: fixed !important; 
+  width: 100%;
+  top: 0; 
+  z-index: 10 !important; 
 }
 
 
@@ -128,64 +126,6 @@ header a {
 }
 
 
-.language-selector {
-  position: relative;
-  display: flex;
-  gap:20px;
-  border: 2px solid var(--roxoprimary);
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.selected-language {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.selected-language img {
-  width: 20px;
-  margin-right: 10px;
-}
-
-.selected-language .arrow-down {
-  margin-left: auto;
-  font-size: 20px;
-}
-
-.language-options {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--white);
-  border: 1px solid var(--gray);
-  border-radius: 5px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 10;
-}
-
-.language-options li {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.language-options li img {
-  width: 20px;
-  margin-right: 10px;
-}
-
-.language-options li:hover {
-  background-color: var(--white);
-}
-
-
 
 
 
@@ -215,7 +155,7 @@ header a {
 
 
 
-.nav-header, .language-selector {
+.nav-header {
   display: flex;
   align-items: center;
 }
@@ -232,14 +172,39 @@ header a {
   font-size: 16px;
 }
 
-.language-selector {
-  margin-left: 20px;
-  cursor: pointer;
+
+.gtranslate_wrapper{
+  
 }
+#gt_float_wrapper{
+  
+  top: 35px !important;
+  right: 50px !important;
+  z-index: 0 !important;
+}
+
+.gt_float_switcher {
+  font-family: Roboto !important;
+  font-size: 20px   !important; 
+  border-radius: 20px !important;
+  box-shadow: none !important;
+  border: solid 2px var(--roxoprimary);
+}
+.gt_float_switcher .gt_options a {
+  width: 100% !important;
+  display: flex !important;
+}
+.gt_float_switcher .gt_options a.gt-current {
+  display: none !important;
+}
+.gt-current-lang{
+  display: flex;
+}
+
 
 /* Estilos para telas menores que 1020px */
 @media (max-width: 1020px) {
-  .nav-header, .language-selector {
+  .nav-header {
     display: none;
   }
 
@@ -279,10 +244,7 @@ header a {
     text-decoration: none;
   }
 
-  .language-selector {
-    margin-top: 20px;
-  }
-
+  
   /* Estilo para overlay quando o menu está ativo */
   .mobile-nav-active {
     overflow: hidden; /* Evita o scroll quando o menu móvel está aberto */

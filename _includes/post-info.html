@@ -8,11 +8,13 @@
       {{ postinfo.title }}
     </h1>
   {% endif %}
-  {% if published %}
-    <span >
-      {% include icon.html icon="fa-regular fa-calendar" %}
-      <span>{{ published }}</span>
-    </span>
+  {% if published%}
+    
+      <span >
+        {% include icon.html icon="fa-regular fa-calendar" %}
+        <span>{{ published }}</span>
+      </span>
+    
   {% endif %}
   
   {% if postinfo.imagem %}

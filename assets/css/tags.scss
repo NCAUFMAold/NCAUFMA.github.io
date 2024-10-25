@@ -14,7 +14,7 @@
 }
 
 .tag[data-active] {
-  background: var(--light-gray);
+  background: var(--light-gray) !important;
   color: var(--text);
 }
 

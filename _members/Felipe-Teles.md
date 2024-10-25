@@ -1,5 +1,5 @@
 ---
-name: Felipe Teles
+name: Felipe Rogerio Silva Teles
 description:
 role: Mestrado
 affiliation: LabMint

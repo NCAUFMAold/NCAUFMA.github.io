@@ -1,5 +1,5 @@
 ---
-name: Vandecia Fernandes 
+name: Vandecia Rejane Monteiro Fernandes 
 image: /assets/images/membros/m26.png
 description:
 role: Professor

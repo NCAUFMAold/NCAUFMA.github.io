@@ -19,8 +19,19 @@ $wrap: 800px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   width: 100%;
+  position: relative;
 }
 
+.cardpublicacao:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  height: 5px;
+  background-color: var(--vermelhoprimary); /* Cor do hover e ativo para home */
+  transition: all 0.3s ease;
+}
 .cardpublicacao-link{
   display: flex;
   flex-direction: row;

@@ -1,5 +1,5 @@
 ---
-name: Simara
+name: Simara Vieira da Rocha
 image: /assets/images/membros/m29.15.22 - Simara Rocha.jpeg
 description:
 role: Professor

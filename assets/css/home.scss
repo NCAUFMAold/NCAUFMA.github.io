@@ -55,6 +55,12 @@
   max-width: 160px;
   text-align: center;
   font-size: 1rem;
+  align-self: flex-start;
+
+}
+
+.btn-primary:hover{
+  background-color: var(--amareloprimary);
 }
 
 .image-block img {
@@ -123,6 +129,9 @@
   border-radius: 20px;
   max-width: 150px;
 }
+.btn-secondary:hover{
+  background-color: var(--amareloprimary);
+}
 .swiper-pagination {
   display: block;
   position: absolute; 
@@ -163,11 +172,31 @@
 }
 
 .cardUltimosProjetos {
-  text-align: center;
-  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: calc(33.33% - 60px);
+  margin: 0;
+  flex-grow: 1; /* Faz os cards crescerem igualmente */
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
   transition: transform 0.3s ease;
+  position: relative;
 }
+
+.cardUltimosProjetos:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  bottom: -2px;
+  left: 0;
+  height: 5px;
+  background-color: var(--amarelosecondary); /* Cor do hover e ativo para home */
+  transition: all 0.3s ease;
+}
+
 
 .cardUltimosProjetos img {
   max-width: 100%;
@@ -289,15 +318,18 @@ z-index: -1;
   flex-wrap: wrap; 
   gap: 40px; 
   justify-content: center; 
+  align-items: center;
 }
 
-.logosparcerias img {
+.logoparceria {
   flex: 1 1 calc(150px - 30px); 
   max-width: calc(150px - 30px); 
   height: auto;
 }
 
-
+.linklogoparceria {
+  align-items: center;
+}
 
 @media (max-width: 1020px) {
   .cardslaboratorios{
@@ -322,9 +354,7 @@ z-index: -1;
   .text-block{
     max-width: 100%;
   }
-  .btn-primary{
-    align-self: flex-start;
-  }
+  
 
   .carousel-item{
     flex-direction: column;
