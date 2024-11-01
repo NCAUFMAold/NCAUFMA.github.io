@@ -3,7 +3,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase
 import { getAuth, setPersistence, browserLocalPersistence, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
 import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
-import firebaseConfig from './firebase-config.js'; // Ajuste o caminho conforme necessário
+import firebaseConfig from '/firebase-config.js'; // Ajuste o caminho conforme necessário
 
 
 // Inicializa o Firebase e configura a autenticação
