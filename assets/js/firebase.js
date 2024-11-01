@@ -6,8 +6,6 @@ import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/9.
 import firebaseConfig from './firebase-config.js'; // Ajuste o caminho conforme necessário
 
 
-
-
 // Inicializa o Firebase e configura a autenticação
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
