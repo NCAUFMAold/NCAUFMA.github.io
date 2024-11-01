@@ -10,7 +10,11 @@
   <div class="informacoesecreditos">
     
     <div class="logofooter" >
-      <img src="/assets/images/logo.svg" alt="Logo do NCA"> 
+      <a href="{{ "/" | relative_url }}" class="home">
+        <span>
+          <img class="logo" src="/assets/images/logo.svg" alt="logo">
+        </span>
+      </a>
       <p style="margin: 0 0 0 0; font-weight: 700;"> 
         <strong>2024 - NCA - UFMA group</strong>
       </p>
@@ -63,7 +67,7 @@
 
   <hr class="linhafooter">
 
-  <div style="margin-top: 0px; text-align: center;">
+  <div style="margin-top: 0px; text-align: center; padding: 0 5%;">
     &copy; {{ site.time | date: "%Y" }}
     {{ site.title }}
     &nbsp; | &nbsp; Built with

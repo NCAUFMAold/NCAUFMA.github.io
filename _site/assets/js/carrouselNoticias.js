@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var swiper = new Swiper('.swiper-container', {
+  var swiperhome = new Swiper('.carouselNoticias', {
     loop: true,
     autoplay: {
       delay: 8000,
@@ -8,10 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
     },
     touchRatio: 1,
     simulateTouch: true,

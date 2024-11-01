@@ -11,3 +11,11 @@
   text-align: justify;
   height: 100vh;
 }
+
+.body-manager{
+  display: flex;   
+  background-color: var(--black);
+  margin: 0;              
+  height: 100vh; 
+  visibility: hidden;
+}

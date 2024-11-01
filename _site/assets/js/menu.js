@@ -7,7 +7,6 @@ function mostrarTodasSecoes() {
 
     // Verificar se há seções para exibir
     if (secoes.length === 0) {
-        console.error('Nenhuma seção encontrada para exibir.');
         return;
     }
 
@@ -18,7 +17,6 @@ function mostrarTodasSecoes() {
 
     // Verificar se há itens de menu para atualizar
     if (menuItens.length === 0) {
-        console.error('Nenhum item de menu encontrado.');
         return;
     }
 
@@ -61,7 +59,6 @@ function criarMenu() {
 
     // Verifica se o menu existe antes de continuar
     if (!menu || secoes.length === 0) {
-        console.error('Menu ou seções não encontrados.');
         return;
     }
 

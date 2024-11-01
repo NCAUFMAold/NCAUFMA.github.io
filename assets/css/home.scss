@@ -334,13 +334,12 @@ z-index: -1;
 @media (max-width: 1020px) {
   .cardslaboratorios{
     flex-wrap: wrap;
+    gap:30px;
   }
   
   .cardlaboratorio{
-    flex: 1 1 45%;
+    flex: 1 1 30%;
   }
- 
-
 
 }
 
@@ -380,7 +379,7 @@ z-index: -1;
     max-width: 8rem;
   }
   .cardslaboratorios {
-    flex-direction: column;
+    flex-direction: row;
     gap: 30px;
   }
   .cardsUltimosProjetos{

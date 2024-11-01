@@ -8,12 +8,14 @@
   gap:30px
 }
 .main-manager {
+  display: flex;
+  flex-direction: column;
   background-color: var(--white);            
   border-radius: 20px;            
-  padding: 20px;
+  padding: 50px;
   margin:  2.5vh 2.5vh 2.5vh 0;      
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
   height: 95vh;
+  gap: 30px;
 }
 
 .main-paginacommenu {

@@ -53,11 +53,17 @@
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js" type="module"></script>
 
 <!-- Incluindo todos os CSS da pasta de estilos -->
 <!-- Incluindo todos os CSS da pasta de estilos -->
 <!-- Incluindo todos os CSS da pasta de estilos -->
 
+
+  
+    <link href="/assets/css/404.css" rel="stylesheet">
+  
 
   
     <link href="/assets/css/alert.css" rel="stylesheet">
@@ -80,7 +86,19 @@
   
 
   
+    <link href="/assets/css/cadastrarnoticias.css" rel="stylesheet">
+  
+
+  
+    <link href="/assets/css/cadastrarprojeto.css" rel="stylesheet">
+  
+
+  
     <link href="/assets/css/cols.css" rel="stylesheet">
+  
+
+  
+    <link href="/assets/css/dashboard.css" rel="stylesheet">
   
 
   
@@ -100,11 +118,11 @@
   
 
   
-    <link href="/assets/css/form-noticias.css" rel="stylesheet">
+    <link href="/assets/css/gerenciador.css" rel="stylesheet">
   
 
   
-    <link href="/assets/css/form_projeto.css" rel="stylesheet">
+    <link href="/assets/css/gerenciadormembros.css" rel="stylesheet">
   
 
   
@@ -124,11 +142,11 @@
   
 
   
-    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="/assets/css/laboratorio.css" rel="stylesheet">
   
 
   
-    <link href="/assets/css/manager.css" rel="stylesheet">
+    <link href="/assets/css/main.css" rel="stylesheet">
   
 
   
@@ -149,10 +167,6 @@
 
   
     <link href="/assets/css/post-nav.css" rel="stylesheet">
-  
-
-  
-    <link href="/assets/css/projetoDash.css" rel="stylesheet">
   
 
   
@@ -198,7 +212,7 @@
 
 <header data-dark="true">
   <!-- Logo sempre visível -->
-  <a href="" class="home">
+  <a href="/" class="home">
     <span>
       <img class="logo" src="/assets/images/logo.svg" alt="logo">
     </span>
@@ -270,7 +284,7 @@
 </header>
 
     <main class="main-default">
-      <section class="headerPagina" id="paginaProjeto" style="background-image: url('/assets/images/fundos/fundoneutro.svg');">
+      <section class="headerPagina" id="paginaProjeto" style="background-image: url('/assets/images/fundos/fundoamarelosecondary.svg');">
   
 
   <h1 class="tituloPagina">Medição e validação do consumo de energia usando dispositivos móveis, técnicas de processamento de imagens e inteligência computacional</h1>
@@ -282,8 +296,6 @@
 
 </section>
 
-
-<div class="titleNoticia" id=""></div>
 
 <div class="DivImagemNoticia">
   
@@ -315,14 +327,18 @@
   <span>
     
       <a href="/Intelig%C3%AAnciacomputacionalparaidentificar-a-predisposi%C3%A7%C3%A3odeconsumidores%C3%A0proposi%C3%A7%C3%A3odea%C3%A7%C3%B5esjudiciaisSIPAJU/">
-        <i class="icon fa-solid fa-angle-left"></i> Notícia Anterior 
+        
+          <i class="icon fa-solid fa-angle-left"></i> Projeto Anterior
+        
       </a>
     
   </span>
   <span>
     
       <a href="/Otimiza%C3%A7%C3%A3odaDistribui%C3%A7%C3%A3odeVe%C3%ADculos/">
-        Próxima Notícia <i class="icon fa-solid fa-angle-right"></i>
+        
+          Próximo Projeto <i class="icon fa-solid fa-angle-right"></i>
+        
       </a>
     
   </span>
@@ -343,7 +359,11 @@
   <div class="informacoesecreditos">
     
     <div class="logofooter">
-      <img src="/assets/images/logo.svg" alt="Logo do NCA"> 
+      <a href="/" class="home">
+        <span>
+          <img class="logo" src="/assets/images/logo.svg" alt="logo">
+        </span>
+      </a>
       <p style="margin: 0 0 0 0; font-weight: 700;"> 
         <strong>2024 - NCA - UFMA group</strong>
       </p>
@@ -389,7 +409,7 @@
 
   <hr class="linhafooter">
 
-  <div style="margin-top: 0px; text-align: center;">
+  <div style="margin-top: 0px; text-align: center; padding: 0 5%;">
     © 2024
     
       |   Built with
@@ -407,7 +427,9 @@
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
 
-
+<!-- Firebase App (sempre necessário) -->
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js" type="module"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js" type="module"></script>
 
 
 
@@ -415,37 +437,77 @@
 <!-- include all js in scripts folder -->
 
 
-  <script src="/assets/js/TruncarNoticias.js"></script>
+  
+    <script src="/assets/js/TruncarNoticias.js"></script>
+  
 
-  <script src="/assets/js/TruncarProjetos.js"></script>
+  
+    <script src="/assets/js/TruncarProjetos.js"></script>
+  
 
-  <script src="/assets/js/anchors.js"></script>
+  
+    <script src="/assets/js/carrouselNoticias.js"></script>
+  
 
-  <script src="/assets/js/carrouselNoticias.js"></script>
+  
+    <script src="/assets/js/carrouseldashboard.js"></script>
+  
 
-  <script src="/assets/js/fetch-tags.js"></script>
+  
+    <script src="/assets/js/fetch-tags.js"></script>
+  
 
-  <script src="/assets/js/formMembros.js"></script>
+  
+    <script src="/assets/js/firebase.js" type="module"></script>
+  
 
-  <script src="/assets/js/formNoticias.js"></script>
+  
+    <script src="/assets/js/formMembros.js"></script>
+  
 
-  <script src="/assets/js/formProjeto.js"></script>
+  
+    <script src="/assets/js/formNoticias.js"></script>
+  
 
-  <script src="/assets/js/gTranslate.js"></script>
+  
+    <script src="/assets/js/formProjeto.js"></script>
+  
 
-  <script src="/assets/js/linhasdepesquisa.js"></script>
+  
+    <script src="/assets/js/gTranslate.js"></script>
+  
 
-  <script src="/assets/js/menu.js"></script>
+  
+    <script src="/assets/js/linhasdepesquisa.js"></script>
+  
 
-  <script src="/assets/js/nav-menu.js"></script>
+  
+    <script src="/assets/js/menu.js"></script>
+  
 
-  <script src="/assets/js/search.js"></script>
+  
+    <script src="/assets/js/nav-menu.js"></script>
+  
 
-  <script src="/assets/js/sidebar.js"></script>
+  
+    <script src="/assets/js/ordenatabela.js"></script>
+  
 
-  <script src="/assets/js/site-search.js"></script>
+  
+    <script src="/assets/js/projetoDashboard.js"></script>
+  
 
-  <script src="/assets/js/table-wrap.js"></script>
+  
+    <script src="/assets/js/search.js"></script>
+  
+
+  
+    <script src="/assets/js/sidebar.js"></script>
+  
+
+  
+    <script src="/assets/js/site-search.js"></script>
+  
 
 
 </html>

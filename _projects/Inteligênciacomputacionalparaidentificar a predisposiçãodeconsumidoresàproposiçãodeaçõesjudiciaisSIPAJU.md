@@ -10,7 +10,7 @@ tags:
  - Equatorial Energia
  - Inteligencia Artificial
 
-background_image: "/assets/images/fundos/fundoneutro.svg"
+background_image: "/assets/images/fundos/fundoamarelosecondary.svg"
 ---
 
 

@@ -11,7 +11,7 @@ tags:
 - Inteligencia artificial
 - Visão computacional
 
-background_image: "/assets/images/fundos/fundoneutro.svg"
+background_image: "/assets/images/fundos/fundoamarelosecondary.svg"
 ---
 
 Projeto com diversas iniciativas desenvolvidas em parceria com a ALUMAR (ALCOA). Entre os principais pontos, destaca-se o desenvolvimento de um LIMS (Laboratory Information Management System), que visa melhorar a gestão de dados de laboratório. Também abrange o Gerenciamento de Trocadores de Calor (HTM) e a Simulação de Manobras em Sistemas de Força, focando na otimização operacional. Além disso, o projeto inclui uma plataforma de E-Learning, com cursos sobre Bombas Centrífugas, Queimaduras Químicas (EBTV), Prevenção de Quedas, Amostragem no Descarregamento, e Evaporação, reforçando a capacitação técnica dos funcionários.

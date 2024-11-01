@@ -9,54 +9,55 @@
         <div class="headersidebarenav">
           <div class="sidebar-header">
             <div class="sidebar-title">
-              <h3 class="title-user">Administrador</h3>
+              <img id="userLogo" class="logouser" src="/assets/images/icones/icone_membro.svg">
+              <h3 id="userName" class="title-user">Administrador</h3>
               <button id="sidebarCollapse" class="button-sidebar">
                 <i class="fa-solid fa-bars"></i>
               </button>
             </div>
-            <p class="sidebar-email">lorem ipsum</p>
+            <p id="userEmail" class="sidebar-email">lorem ipsum</p>
           </div>
           <ul class="nav-sidebar components">
             <li>
-              <a href="/manager">
+              <a href="/gerenciador/">
                 <i class="fa-solid fa-house"></i>
                 <span>Home</span>
               </a>
             </li>
             <li>
-              <a href="/manager/form_membros/">
+              <a href="/gerenciador/membros">
                 <i class="fa-solid fa-users"></i>
                 <span>Membros</span>
               </a>
             </li>
             <li>
-              <a href="/manager/form_projeto/">
-                <i class="fas fa-home"></i>
-                <span>Projetos</span>
-              </a>
-            </li>
-            <li>
-              <a href="/manager/form_noticia">
-                <i class="fa-solid fa-gear"></i>
+              <a href="/gerenciador/noticias">
+                <i class="fa-solid fa-newspaper"></i>
                 <span>Notícias</span>
               </a>
             </li>
             <li>
-              <a href="/manager/publicacoes">
-                <i class="fa-solid fa-address-card"></i>
+              <a href="/gerenciador/projetos/">
+                <i class="fa-solid fa-file-code"></i>
+                <span>Projetos</span>
+              </a>
+            </li>
+            <li>
+              <a href="/gerenciador/publicacoes/">
+                <i class="fa-solid fa-file-lines"></i>                
                 <span>Publicações</span>
               </a>
             </li>
             <li>
-              <a href="/manager/config">
-                <i class="fa-solid fa-gear"></i>
-                <span>Configurações</span>
+              <a href="/gerenciador/laboratorios/">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Laboratórios</span>
               </a>
             </li>
           </ul>
         </div>
         <div class="sidebar-footer">
-          <a class="iconetitlelogout" href="/"">
+          <a id="logoutBtn" class="iconetitlelogout">
             <button class="button-logout">
               <i class="fa-solid fa-right-to-bracket"></i>
             </button>

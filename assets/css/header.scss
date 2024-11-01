@@ -207,6 +207,9 @@ header a {
   .nav-header {
     display: none;
   }
+  .gtranslate_wrapper{
+    display: none;
+  }
 
   .mobile-menu {
     display: inline-block;
@@ -230,6 +233,21 @@ header a {
     padding: 50px;
   }
 
+  .gtranslate_wrapper.open{
+    display: block; /* Exibe o menu e o seletor de idioma ao clicar no ícone */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #gt_float_wrapper{
+    top: 360px !important;
+    right: 50px !important;
+    left: 50px;
+    z-index: 0 !important;
+  }
+  
+
   .nav-header ul.nav-list {
     flex-direction: column;
     gap: 30px;
@@ -250,8 +268,6 @@ header a {
     overflow: hidden; /* Evita o scroll quando o menu móvel está aberto */
   }
 
-
-
   #home.active::after,
   #home:hover::after,
   #sobrenos.active::after,
@@ -271,55 +287,31 @@ header a {
   /* Aplica fundo colorido nos itens ativos ou ao passar o mouse */
   #home.active,
   #home:hover {
-    background-color: var(--roxoprimary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--roxoprimary);
   }
 
   #sobrenos.active,
   #sobrenos:hover {
-    background-color: var(--vermelhoprimary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--vermelhoprimary);
   }
 
   #membros.active,
   #membros:hover {
-    background-color: var(--amareloprimary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--amareloprimary);
   }
 
   #noticias.active,
   #noticias:hover {
-    background-color: var(--roxosecondary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--roxosecondary);
   }
 
   #publicacoes.active,
   #publicacoes:hover {
-    background-color: var(--vermelhosecondary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--vermelhosecondary);
   }
 
   #projetos.active,
   #projetos:hover {
-    background-color: var(--amarelosecondary);
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: var(--white);
-    margin-left: -20px;
+    color: var(--amarelosecondary);
   }
 }

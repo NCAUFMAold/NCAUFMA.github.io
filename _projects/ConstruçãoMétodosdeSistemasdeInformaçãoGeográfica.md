@@ -11,7 +11,7 @@ tags:
 - ANEEL
 - SIG
 
-background_image: "/assets/images/fundos/fundoneutro.svg"
+background_image: "/assets/images/fundos/fundoamarelosecondary.svg"
 ---
 
 

@@ -8,6 +8,7 @@ $wrap: 600px;
   flex-direction: row;
   justify-content: space-between;
   color: var(--gray);
+  padding: 0 10%;
   width: 100%;
 }
 .post-nav span a{
@@ -40,7 +41,6 @@ $wrap: 600px;
 @media (max-width: $wrap) {
   .post-nav {
     align-items: center;
-    flex-direction: column;
   }
 
   .post-nav > * {

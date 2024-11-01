@@ -5,7 +5,7 @@
 */
 {
   // elements to filter
-  const elementSelector = ".cardnoticia, .cardProjeto, .cardpublicacao";
+  const elementSelector = ".cardnoticia, .cardProjeto, .cardpublicacao, .cardmembro, .dadopesquisado";
   // search box element
   const searchBoxSelector = ".search-box";
   // results info box element
