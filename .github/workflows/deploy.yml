@@ -15,7 +15,7 @@ jobs:
 
       - name: Set up Firebase config
         run: |
-          cp assets/js/firebase-config.js.template assets/js/firebase-config.js
+          cp assets/js/firebase-config-template.js assets/js/firebase-config.js
           sed -i "s/FIREBASE_API_KEY/${{ secrets.FIREBASE_API_KEY }}/g" assets/js/firebase-config.js
           sed -i "s/FIREBASE_AUTH_DOMAIN/${{ secrets.FIREBASE_AUTH_DOMAIN }}/g" assets/js/firebase-config.js
           sed -i "s/FIREBASE_PROJECT_ID/${{ secrets.FIREBASE_PROJECT_ID }}/g" assets/js/firebase-config.js
