@@ -16,7 +16,7 @@
 <!-- include all js in scripts folder -->
 {% assign scripts = site.static_files | where_exp: "file", "file.path contains '/assets/js/'" %}
 {% for script in scripts %}
-  {% if script.path == '/assets/js/verificalogin.js' or script.path == '/assets/js/firebase.js' or script.path == '/assets/js/logout.js' or script.path == '/assets/js/login.js' %}
+  {% if script.path == '/assets/js/firebase.js' or script.path == '/assets/js/firebase-config.js.template' or script.path == '/assets/js/firebase-config.js' %}
     <script src="/{{ script.path | relative_url | remove_first: '/' }}" type="module"></script>
   {% else %}
     <script src="/{{ script.path | relative_url | remove_first: '/' }}"></script>
