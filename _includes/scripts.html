@@ -9,6 +9,8 @@
 <!-- Firebase App (sempre necessário) -->
 <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js" type="module"></script>
 <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js" type="module"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bcrypt.js/2.4.3/bcrypt.min.js"></script>
+
 
 
 
@@ -16,7 +18,7 @@
 <!-- include all js in scripts folder -->
 {% assign scripts = site.static_files | where_exp: "file", "file.path contains '/assets/js/'" %}
 {% for script in scripts %}
-  {% if script.path == '/assets/js/firebase.js' or script.path == '/assets/js/firebase-config-template.js' or script.path == '/assets/js/firebase-config.js' %}
+  {% if script.path == '/assets/js/firebase.js' or script.path == '/assets/js/firebase-config-template.js' %}
     <script src="/{{ script.path | relative_url | remove_first: '/' }}" type="module"></script>
   {% else %}
     <script src="/{{ script.path | relative_url | remove_first: '/' }}"></script>

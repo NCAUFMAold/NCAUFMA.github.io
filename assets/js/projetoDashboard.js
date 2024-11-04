@@ -27,7 +27,9 @@ async function getProjetos(){
 }
 
 
-getProjetos();
+if (window.location.pathname === "/gerenciador/projetos/") {
+    getProjetos();
+}
 
 
 function createNewTDProject(contador ,tituloProj, subTituloProj, tagsProj, tableBody){
