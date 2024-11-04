@@ -1,5 +1,5 @@
 async function getProjetos(){
-    const response = await fetch("http://localhost:3000/getProjects");
+    const response = await fetch("https://nca-api.vercel.app/api/getProjects");
     try {
         if (!response.ok){
             throw new Error('Erro ao obter projetos' + response.status);
